@@ -20,7 +20,7 @@ answers = [
     'solarsystem',
     'artificialintelligence',
     'python',
-    'siddanna',
+    'siddanna',        0
 ]
 
 words = [
@@ -60,11 +60,11 @@ def checkans():
         messagebox.showinfo(title="Result",message="Success,this is right answer")
         res()
     else:
-        messagebox.showerror(title="Result",message="Incorrect")
+        messagebox.showerror(title="Result",message="This is the wrong answer")
         e1.delete(0,END)
 window=Tk()
 window.geometry("350x400+400+300")
-window.title("Jumbble Game by TEAM 4 PESITM")
+window.title("Jumble Game by Team 4 PESITM")
 window.configure(bg="#000000")
 l1=Label(window,text="Your Text Here",
          font=("bold",18),
@@ -82,18 +82,19 @@ bt=Button(window,
           text="Check",
           font=("Comic sans ms",16),
           width=16,
-          bg="green",
-          fg="white",
+          bg="purple",
+          fg="black",
           relief=GROOVE,
           command=checkans
           )
 bt.pack(pady=40)
 bt1=Button(window,
           text="Reset",
-          font=("Comic sans ms",16),
+          font=("Comic sans ms",16)
+
           width=16,
-          bg="red",
-          fg="white",
+          bg="white",
+          fg="red",
           relief=GROOVE,
           command=res
           )
